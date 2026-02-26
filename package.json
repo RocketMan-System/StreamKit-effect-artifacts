@@ -1,0 +1,48 @@
+{
+  "name": "streamkit-effect-template",
+  "version": "1.0.1",
+  "description": "Template for RocketMan StreamKit application custom effect",
+  "keywords": [
+    "template",
+    "js",
+    "rocketman",
+    "streamkit"
+  ],
+  "homepage": "https://github.com/RocketMan-System/StreamKit-effect-template#readme",
+  "bugs": {
+    "url": "https://github.com/RocketMan-System/StreamKit-effect-template/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RocketMan-System/StreamKit-effect-template.git"
+  },
+  "license": "MIT",
+  "author": "RocketMan",
+  "type": "commonjs",
+  "main": "main.js",
+  "scripts": {
+    "build": "webpack --progress",
+    "watch": "webpack --watch --progress"
+  },
+  "devDependencies": {
+    "@types/node": "^25.2.3",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "copy-webpack-plugin": "^13.0.1",
+    "css-loader": "^7.1.4",
+    "esbuild-loader": "^4.4.2",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.6.6",
+    "less-loader": "^12.3.1",
+    "mini-css-extract-plugin": "^2.10.0",
+    "webpack": "^5.105.2",
+    "webpack-cli": "^6.0.1"
+  },
+  "dependencies": {
+    "@rocketman-system/streamkit-widget-helper": "^1.0.5",
+    "@xxanderwp/jstoolkit": "^1.0.1",
+    "axios": "^1.13.5",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
+  }
+}

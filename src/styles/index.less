@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+	user-select: none;
+}
+
+.effectMain {
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	color: white;
+}
+
+.camera {
+	background-color: rgba(3, 202, 3, 0.295);
+	width: 100%;
+	height: 100%;
+	display: grid;
+	grid-template-rows: 1fr 60% 1fr;
+	font-family: "Roboto", sans-serif;
+	font-size: 3vh;
+	line-height: 3vh;
+	font-weight: 800;
+	.circle {
+		width: 3vh;
+		height: 3vh;
+		border-radius: 100%;
+		background-color: red;
+		display: inline-block;
+		animation-name: recAnim;
+		animation-duration: 1.5s;
+		animation-iteration-count: infinite;
+		// animation-direction: alternate;
+		@keyframes recAnim {
+			0% {
+				opacity: 1;
+			}
+			50% {
+				opacity: 0.5;
+			}
+			100% {
+				opacity: 1;
+			}
+		}
+	}
+	& > div {
+		&:first-child {
+			margin-top: 5%;
+		}
+		&:last-child {
+			margin-bottom: 5%;
+		}
+		display: grid;
+		grid-template-columns: 1fr 40% 1fr;
+		& > div:last-child {
+			text-align: right;
+			margin-right: 10%;
+		}
+		& > div:first-child {
+			margin-left: 10%;
+		}
+	}
+
+	img {
+		height: 2vh;
+		animation-name: batteryAnim;
+		animation-duration: 1s;
+		animation-iteration-count: infinite;
+		animation-direction: alternate;
+		@keyframes batteryAnim {
+			from {
+				opacity: 1;
+			}
+			to {
+				opacity: 0;
+			}
+		}
+	}
+
+	.message {
+		img {
+			height: 3vh;
+			animation-name: none;
+		}
+	}
+
+	.overlay {
+		position: absolute;
+		width: 50%;
+		top: 50%;
+		left: 50%;
+		aspect-ratio: 16 / 9;
+		transform: translate(-50%, -50%);
+
+		--border-style: 5px solid rgb(255, 255, 255);
+		--border-space: 20px;
+		.overlay-element {
+			position: absolute;
+			width: 7vh; /* controls the length of the borders */
+			height: 7vh; /* controls the height of the borders */
+			&.top-left {
+				border-left: var(--border-style);
+				border-top: var(--border-style);
+				top: var(--border-space);
+				left: var(--border-space);
+			}
+
+			&.top-right {
+				border-right: var(--border-style);
+				border-top: var(--border-style);
+				top: var(--border-space);
+				right: var(--border-space);
+			}
+
+			&.bottom-left {
+				border-left: var(--border-style);
+				border-bottom: var(--border-style);
+				bottom: var(--border-space);
+				left: var(--border-space);
+			}
+
+			&.bottom-right {
+				border-right: var(--border-style);
+				border-bottom: var(--border-style);
+				bottom: var(--border-space);
+				right: var(--border-space);
+			}
+		}
+	}
+}

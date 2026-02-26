@@ -1,0 +1,16 @@
+{
+    "name": {
+        "en": "StreamKit Effect Template",
+        "ru": "Шаблон эффекта для StreamKit",
+        "ua": "Шаблон ефекту для StreamKit"
+    },
+    "author": "RocketMan",
+    "version": "1.0.0",
+    "type": "effect",
+    "permissions": ["effectData"],
+    "settings": {
+        "maxSeconds": 120,
+        "volume": 70,
+        "defaultSeconds": 30
+    }
+}

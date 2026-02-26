@@ -1,0 +1,24 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g clip-path="url(#clip0_rocket_template)">
+    <rect width="48" height="48" rx="5" fill="#6C3BFF"/>
+    
+    <!-- Rocket body -->
+    <path d="M24 10C20.5 14 19 18.5 19 23V30H29V23C29 18.5 27.5 14 24 10Z" fill="white"/>
+    
+    <!-- Window -->
+    <circle cx="24" cy="21" r="2.5" fill="#6C3BFF"/>
+    
+    <!-- Fins -->
+    <path d="M19 24L15 28V30H19V24Z" fill="white"/>
+    <path d="M29 24L33 28V30H29V24Z" fill="white"/>
+    
+    <!-- Flame -->
+    <path d="M22 30C22 33 23 35 24 37C25 35 26 33 26 30H22Z" fill="white"/>
+    
+  </g>
+  <defs>
+    <clipPath id="clip0_rocket_template">
+      <rect width="48" height="48" fill="white"/>
+    </clipPath>
+  </defs>
+</svg>
