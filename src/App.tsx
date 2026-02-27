@@ -6,9 +6,8 @@ import {
 } from "@rocketman-system/streamkit-widget-helper";
 import { randomInt } from "@xxanderwp/jstoolkit";
 
-const battaryIcon = require("./media/battary.svg").default;
 
-const audio = new Audio(require("./media/camera.mp3").default);
+const audio = new Audio(require("./media/rotate.mp3").default);
 
 export const App = React.memo(() => {
 	const [loaded, setLoaded] = React.useState(false);
