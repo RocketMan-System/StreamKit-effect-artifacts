@@ -4,6 +4,7 @@ import {
 	ApiRequest,
 	TRIGGER_ID,
 } from "@rocketman-system/streamkit-widget-helper";
+import { randomInt } from "@xxanderwp/jstoolkit";
 
 const battaryIcon = require("./media/battary.svg").default;
 
@@ -11,6 +12,7 @@ const audio = new Audio(require("./media/camera.mp3").default);
 
 export const App = React.memo(() => {
 	const [loaded, setLoaded] = React.useState(false);
+	const [show, setShow] = React.useState(true);
 	const [data, setData] = React.useState<{
 		/** ID of the effect these data belong to */
 		effectId: string;
@@ -47,6 +49,36 @@ export const App = React.memo(() => {
 	}, []);
 
 	React.useEffect(() => {
+      let off = false;
+
+      const tick = () => {
+        if (off) {
+          return;
+        }
+
+        setTimeout(
+          () => {
+            setShow(old => !old);
+            tick();
+            ApiRequest("GET", "private/screen/screenshot", {
+				triggerId: TRIGGER_ID,
+			}).then((data) => {
+				if(!off)
+				setScreenshot(data);
+			});
+          },
+          randomInt(100, 500)
+        );
+      };
+
+      tick();
+
+      return () => {
+        off = true;
+      };
+    }, []);
+
+	React.useEffect(() => {
 		if (!loaded || !data?.volume) return;
 		audio.currentTime = 0;
 		audio.play();
@@ -67,7 +99,7 @@ export const App = React.memo(() => {
 
 	return (
       <>
-        <img className="badscreen" src={screenshot} />
+        {show ? <img className="badscreen" src={screenshot} /> : <></>}
       </>
     );
 });
