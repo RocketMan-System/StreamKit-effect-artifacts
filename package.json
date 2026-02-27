@@ -1,20 +1,20 @@
 {
-  "name": "streamkit-effect-template",
+  "name": "streamkit-effect-artifacts",
   "version": "1.0.1",
-  "description": "Template for RocketMan StreamKit application custom effect",
+  "description": "artifacts effect for RocketMan StreamKit application custom effect",
   "keywords": [
-    "template",
+    "artifacts",
     "js",
     "rocketman",
     "streamkit"
   ],
-  "homepage": "https://github.com/RocketMan-System/StreamKit-effect-template#readme",
+  "homepage": "https://github.com/RocketMan-System/StreamKit-effect-artifacts#readme",
   "bugs": {
-    "url": "https://github.com/RocketMan-System/StreamKit-effect-template/issues"
+    "url": "https://github.com/RocketMan-System/StreamKit-effect-artifacts/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/RocketMan-System/StreamKit-effect-template.git"
+    "url": "git+https://github.com/RocketMan-System/StreamKit-effect-artifacts.git"
   },
   "license": "MIT",
   "author": "RocketMan",
